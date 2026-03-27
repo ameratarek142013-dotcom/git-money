@@ -1,0 +1,1994 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "IBMPlexSansArabic-Bold";
+    src: url(../fonts/IBMPlexSansArabic-Bold.ttf);
+}
+
+@font-face {
+    font-family: "IBMPlexSansArabic-Medium";
+    src: url(../fonts/IBMPlexSansArabic-Medium.ttf);
+}
+
+@font-face {
+    font-family: "IBMPlexSansArabic-SemiBold";
+    src: url(../fonts/IBMPlexSansArabic-SemiBold.ttf);
+}
+
+:root {
+    --redColor: #e7000b;
+    --bgRed: #ffe2e2;
+    --greenColor: #00a63e;
+    --bgGreen: #f0fdf4;
+    --blueColor: #155dfc;
+    --bgBlue: #eff6ff;
+    --orangeColor: #ff6900;
+    --bgOrange: #ffedd4;
+    --burbleColor: #9810fa;
+    --bgBurble: #f3e8ff;
+    --fontWeight500: "IBMPlexSansArabic-Medium";
+    --fontWeight700: "IBMPlexSansArabic-Bold";
+}
+
+button,
+input {
+    font-family: "IBMPlexSansArabic-SemiBold";
+}
+
+body {
+    font-family: "IBMPlexSansArabic-SemiBold";
+    color: #6a7282;
+    margin: 0;
+}
+
+
+.myProject {
+    width: 100%;
+    
+
+}
+
+
+.project {
+    width: 80%;
+    position: relative;
+    right: 20%;
+
+
+}
+
+.sideBar {
+    width: 20%;
+    height: 100vh;
+    padding: 1.5625rem;
+    overflow-y: auto;
+    position: fixed;
+    z-index: 1;
+}
+
+.sideBar .barHead,
+.project .logo {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.sideBar .barHead i,
+.project .logo>i {
+    width: 55px;
+    height: 55px;
+    background-color: #2d50f0;
+    color: white;
+    align-content: center;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    border-radius: 15px;
+}
+
+.sideBar .barHead .content span,
+.project .logo .content>span {
+    font-family: "IBMPlexSansArabic-Bold";
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    color: black;
+}
+
+.sideBar .barHead .content p,
+.project .logo .content>p {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.sideBar .barPart1 {
+    margin-block: 30px;
+}
+
+.sideBar .barPart1 div {
+    padding-block: 12px;
+    margin-block: 10px;
+    transition: all 0.2s;
+}
+
+.sideBar .barPart1 div:hover {
+    background-color: #fafafa;
+    border-radius: 10px;
+}
+
+.sideBar .barPart1 div:nth-child(1) {
+    background-color: var(--bgBlue);
+    color: var(--blueColor);
+    border-radius: 10px;
+    border: 1px solid rgb(228, 228, 255);
+}
+
+.sideBar .barPart1 div:nth-child(1)>a {
+    color: var(--blueColor);
+}
+
+.sideBar .barPart1 i {
+    margin-inline: 10px;
+}
+
+.sideBar .barPart1 a {
+    text-decoration: none;
+    color: #6a7282;
+}
+
+.sideBar .barPart2 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.sideBar .barPart2 div {
+    margin-block: 20px;
+    padding-block: 10px;
+    transition: all 0.2s;
+}
+
+.sideBar .barPart2 div:hover {
+    transform: translate(3px);
+    background-color: #fafafa;
+    border-radius: 10px;
+}
+
+.sideBar .barPart2 div:hover .fa-paper-plane {
+    background-color: #dbe8fc;
+}
+
+.sideBar .barPart2 div:hover .fa-plus {
+    background-color: #d4f3e1;
+}
+
+.sideBar .barPart2 div:hover .fa-receipt {
+    background-color: #efe0fc;
+}
+
+.sideBar .barPart2 div:hover .fa-chart-line {
+    background-color: #fbe4d4;
+}
+
+.sideBar .barPart2 i {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    margin-inline: 10px;
+    align-content: center;
+    font-size: 1rem;
+}
+
+.sideBar .barPart2 a {
+    text-decoration: none;
+    color: #6a7282;
+}
+
+.sideBar .barPart2 .fa-paper-plane {
+    background-color: var(--bgBlue);
+    color: var(--blueColor);
+    transition: all 0.2s;
+}
+
+.sideBar .barPart2 .fa-plus {
+    background-color: var(--bgGreen);
+    color: var(--greenColor);
+    transition: all 0.2s;
+}
+
+.sideBar .barPart2 .fa-receipt {
+    background-color: var(--bgBurble);
+    color: var(--burbleColor);
+    transition: all 0.2s;
+}
+
+.sideBar .barPart2 .fa-chart-line {
+    background-color: var(--bgOrange);
+    color: var(--orangeColor);
+    transition: all 0.2s;
+}
+
+.project {
+    padding: 30px;
+    background-color: #f9fafb;
+}
+
+.project nav {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: radial-gradient(white 60%, #f5f9fe 80%);
+    background-color: white;
+    border: 2px solid #e5e6e7;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+
+
+.project .div {
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project .online {
+    width: 12%;
+    background-color: var(--bgGreen);
+    color: var(--greenColor);
+    font-family: "IBMPlexSansArabic-Medium";
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(232, 254, 232);
+    justify-self: flex-start;
+}
+
+.project .online i {
+    padding-left: 20px;
+    font-size: 10px;
+    color: #1acf62;
+}
+
+.project .bar {
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    justify-self: flex-end;
+
+}
+
+.project .bar i {
+    align-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e5e6e7;
+    border-radius: 10px;
+    margin-inline: 5px;
+    transition: all 0.2s;
+}
+
+.project .bar i:hover {
+    background-color: #f3f4f6;
+}
+
+.project .bar .fa-bell {
+    position: relative;
+}
+
+.project .bar .fa-bell::after {
+    content: "2";
+    font-size: 0.75rem;
+    font-family: "IBMPlexSansArabic-Bold";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fb2c36;
+    color: white;
+    width: 18px;
+    height: 18px;
+    padding: 3px;
+    border-radius: 9px;
+    position: absolute;
+    top: -4px;
+    right: -4px;
+}
+
+.project .bar .account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #e5e6e7;
+    padding: 0px 15px;
+    border-radius: 15px;
+    margin-inline-start: 10px;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+.project .bar .account:hover {
+    box-shadow: 0px 2px 4px #e5e6e7;
+}
+
+.project .bar .account p {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: black;
+    margin: 0;
+}
+
+.project .bar .account span {
+    font-size: 0.75rem;
+    line-height: 1rem;
+}
+
+.project .bar .account img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    margin-inline-start: 10px;
+    margin-top: 5px;
+}
+
+.project .balance {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.project .balance .card {
+    width: 32%;
+    margin-block: 20px;
+}
+
+.project .balance .card .inner {
+    border: 2px solid #e5e6e7;
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.project .balance .card .inner p {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-block: 5px;
+}
+
+.project .balance .card .inner p:nth-child(2) {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    color: black;
+}
+
+.project .balance .card .inner p:nth-child(3) {
+    color: var(--greenColor);
+}
+
+.project .balance .card .inner p.color {
+    color: var(--redColor);
+}
+
+.activity {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "new-activity last-activity last-activity"
+        "reciepts last-activity last-activity";
+    gap: 15px;
+}
+
+.activity .new-activities,
+.reciepts,
+.last-activities {
+    border: 2px solid #e5e6e7;
+    border-radius: 15px;
+    background-color: white;
+    padding: 20px;
+}
+
+.activity .new-activities {
+    grid-area: new-activity;
+}
+
+.activity .new-activities h2 {
+    color: black;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.activity .new-activities .card1,
+.activity .new-activities .card2 {
+    display: flex;
+    align-items: start;
+    background-color: var(--bgBlue);
+    padding: 10px;
+    border-radius: 10px;
+    border-left: 4px solid var(--blueColor);
+    margin-block: 20px;
+}
+
+.activity .new-activities .card2 {
+    background-color: var(--bgGreen);
+    border-left: 4px solid var(--greenColor);
+
+}
+
+.activity .new-activities .card1 i,
+.activity .new-activities .card2 i {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    background-color: #dbeafe;
+    color: var(--blueColor);
+    border-radius: 15px;
+    align-content: center;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.activity .new-activities .card2 i {
+    color: var(--greenColor);
+    background-color: #DBFCE7;
+}
+
+.activity .new-activities .card1 .content h3,
+.activity .new-activities .card2 .content h3 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-family: var(--fontWeight700);
+    color: black;
+    display: inline-block;
+
+}
+
+.activity .new-activities .card1 span,
+p,
+.activity .new-activities .card2 span,
+p {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    margin-bottom: 10px;
+}
+
+.activity .new-activities .card1 span:nth-child(2) {
+    color: var(--blueColor);
+    padding-right: 15px;
+}
+
+.activity .new-activities .card2 span:nth-child(2) {
+    color: var(--greenColor);
+    padding-right: 50px;
+}
+
+.new-activities hr {
+    background-color: #e5e6e7;
+    height: 1px;
+    border: none;
+}
+
+.activity .new-activities a {
+    text-decoration: none;
+    color: var(--blueColor);
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    font-family: var(--fontWeight500);
+    transition: all .1s;
+}
+
+.activity .new-activities a:hover {
+    color: #2251df;
+}
+
+.activity .reciepts {
+    grid-area: reciepts;
+}
+
+.activity .reciepts .head,
+.activity .last-activities .head,
+.money .puplic .head,
+.money .in-out .head,
+.money .account .head,
+.money .visa .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.activity .reciepts .head h2,
+.activity .last-activities .head h2,
+.money .puplic .head h2,
+.money .in-out .head h2,
+.money .account .head h2,
+.money .visa .head h2 {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: black;
+}
+
+.activity .reciepts .head a,
+.activity .last-activities .head a,
+.money .puplic .head a,
+.money .in-out .head a,
+.money .account .head a,
+.money .visa .head a {
+    text-decoration: none;
+    color: #6A7282;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    font-family: var(--fontWeight500);
+    transition: all .1s;
+}
+
+.activity .reciepts .head a:hover,
+.activity .last-activities .head a:hover,
+.money .puplic .head a:hover,
+.money .in-out .head a:hover,
+.money .account .head a:hover,
+.money .visa .head a:hover {
+    color: black;
+}
+
+.activity .reciepts .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block: 1.25rem;
+}
+
+.activity .reciepts .content span:nth-child(1) {
+    color: black;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-family: var(--fontWeight700);
+}
+
+.activity .reciepts .content span:nth-child(2) {
+    font-size: .875rem;
+    line-height: 1.25rem;
+}
+
+.activity .reciepts .cards {
+    display: grid;
+    gap: .75rem;
+    grid-template-areas:
+        "card1 card2"
+        "card3 card4"
+    ;
+}
+
+.activity .reciepts .cards .card1,
+.activity .reciepts .cards .card2,
+.activity .reciepts .cards .card3,
+.activity .reciepts .cards .card4 {
+    background-color: #F9FAFB;
+    padding: .625rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: .625rem;
+    border: 1px solid #f1f1f1;
+}
+
+.activity .reciepts .cards .card1 i,
+.activity .reciepts .cards .card2 i,
+.activity .reciepts .cards .card3 i,
+.activity .reciepts .cards .card4 i {
+    width: 35px;
+    height: 35px;
+    align-content: center;
+    border-radius: .625rem;
+    margin-bottom: .625rem;
+
+}
+
+
+
+.activity .reciepts .cards .card1 i {
+
+    background-color: #DBEAFE;
+    color: var(--blueColor);
+
+}
+
+.activity .reciepts .cards .card2 i {
+
+    background-color: #FEF9C2;
+    color: #D08700;
+
+}
+
+.activity .reciepts .cards .card3 i {
+
+    background-color: #DBFCE7;
+    color: var(--greenColor);
+
+
+}
+
+.activity .reciepts .cards .card4 i {
+
+    background-color: var(--bgRed);
+    color: var(--redColor);
+
+}
+
+.activity .reciepts .cards .card1 span:not(.big),
+.activity .reciepts .cards .card2 span:not(.big),
+.activity .reciepts .cards .card3 span:not(.big),
+.activity .reciepts .cards .card4 span:not(.big) {
+    font-size: .75rem;
+    line-height: 1rem;
+}
+
+.activity .reciepts .cards .card1 .big,
+.activity .reciepts .cards .card2 .big,
+.activity .reciepts .cards .card3 .big,
+.activity .reciepts .cards .card4 .big {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: black;
+}
+
+.activity .reciepts .cards .card1 span:last-child {
+    color: var(--redColor);
+}
+
+.activity .reciepts .cards .card2 span:last-child {
+    color: var(--orangeColor);
+}
+
+.activity .reciepts .cards .card3 span:last-child {
+    color: var(--greenColor);
+}
+
+.activity .reciepts .cards .card1 {
+    grid-area: card1;
+}
+
+.activity .reciepts .cards .card2 {
+    grid-area: card2;
+}
+
+.activity .reciepts .cards .card3 {
+    grid-area: card3;
+}
+
+.activity .reciepts .cards .card4 {
+    grid-area: card4;
+}
+
+
+
+
+
+.activity .last-activities {
+    grid-area: last-activity;
+}
+
+.activity .last-activities table {
+
+    border-collapse: collapse;
+    width: 100%;
+    overflow-x: auto;
+
+
+}
+
+.activity .last-activities table p {
+    margin: 0;
+}
+
+.activity .last-activities table th {
+    border-bottom: 1px solid rgb(237, 237, 237);
+    text-align: start;
+    padding-block: 20px;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    color: #364153;
+
+
+
+}
+
+.activity .last-activities table td:nth-child(1) p:first-child {
+    color: black;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    font-family: var(--fontWeight500);
+
+}
+
+.activity .last-activities table td {
+    padding-block: 15px;
+
+}
+
+.activity .last-activities table td:nth-child(1) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.activity .last-activities table td:nth-child(1) i,
+.activity .last-activities img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #b3c6ec;
+    align-content: center;
+    margin-left: 10px;
+}
+
+.activity .last-activities table tr:nth-child(2) td:nth-child(1) i {
+    color: var(--orangeColor);
+    background-color: var(--bgOrange);
+}
+
+.activity .last-activities table tr:nth-child(3) td:nth-child(1) i {
+    color: var(--blueColor);
+    background-color: #DBEAFE;
+}
+
+.activity .last-activities table tr:nth-child(6) td:nth-child(1) i {
+    color: var(--redColor);
+    background-color: var(--bgRed);
+}
+
+.activity .last-activities table tr:nth-child(7) td:nth-child(1) i {
+    color: #4F39F6;
+    background-color: #E0E7FF;
+}
+
+.activity .last-activities table tr:nth-child(8) td:nth-child(1) i {
+    color: #0092B8;
+    background-color: #CEFAFE;
+}
+
+.activity .last-activities table tr:nth-child(9) td:nth-child(1) i {
+    color: #009966;
+    background-color: #D0FAE5;
+}
+
+.activity .last-activities table td:nth-child(1) p:first-child {
+    color: black;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    font-family: var(--fontWeight500);
+
+}
+
+.activity .last-activities table td:nth-child(2) span,
+.activity .last-activities table td:nth-child(4) span {
+    width: fit-content;
+    height: fit-content;
+    padding-inline: 10px;
+    border-radius: 10px;
+    font-size: .75rem;
+    line-height: 1rem;
+    font-family: var(--fontWeight500);
+}
+
+.activity .last-activities table td:nth-child(2) .col1 {
+    background-color: #DBFCE7;
+    color: var(--greenColor);
+}
+
+.activity .last-activities table td:nth-child(2) .col2 {
+    background-color: #FFEDD4;
+    color: #9F2D00;
+}
+
+.activity .last-activities table td:nth-child(2) .col3 {
+    background-color: var(--bgBlue);
+    color: #193CB8;
+}
+
+.activity .last-activities table td:nth-child(2) .col4 {
+    background-color: #F3E8FF;
+    color: #6E11B0;
+}
+
+.activity .last-activities table td:nth-child(2) .col5 {
+    background-color: #DBFCE7;
+    color: #016630;
+}
+
+.activity .last-activities table td:nth-child(2) .col6 {
+    background-color: #FFE2E2;
+    color: #9F0712;
+}
+
+.activity .last-activities table td:nth-child(2) .col7 {
+    background-color: #E0E7FF;
+    color: #372AAC;
+}
+
+.activity .last-activities table td:nth-child(2) .col8 {
+    background-color: #CEFAFE;
+    color: #005F78;
+}
+
+.activity .last-activities table td:nth-child(2) .col9 {
+    background-color: #D0FAE5;
+    color: #006045;
+}
+
+
+.activity .last-activities table td:nth-child(4) span {
+    color: var(--greenColor);
+    background-color: #DBFCE7;
+}
+
+.activity .last-activities table td:nth-child(4) .color {
+    background-color: #FEF9C2;
+    color: #A06D26;
+}
+
+.activity .last-activities table td:nth-child(3),
+.activity .last-activities table td:nth-child(5) {
+
+    font-size: .875rem;
+    line-height: 1.25rem;
+
+}
+
+.activity .last-activities table td:nth-child(5) {
+    color: black;
+}
+
+.activity .last-activities table tr:nth-child(5) td:nth-child(5),
+.activity .last-activities table tr:nth-child(1) td:nth-child(5) {
+    color: var(--greenColor);
+}
+
+
+
+.project .money {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "puplic in-out visa"
+        "puplic account visa"
+        "puplic . ."
+    ;
+    margin-block: 20px;
+}
+
+.project .money .puplic,
+.project .money .in-out,
+.project .money .account,
+.project .money .visa {
+    border: 2px solid #e5e6e7;
+    border-radius: 15px;
+    background-color: white;
+    padding: 20px;
+}
+
+.project .money .puplic {
+    grid-area: puplic;
+    height: fit-content;
+}
+
+.project .money .puplic .card1 {
+    background-color: #EFF6FF;
+    padding: .9375rem;
+    border-radius: .9375rem;
+    border: 1px solid rgb(231, 231, 255);
+    margin-block: 20px;
+}
+
+.project .money .puplic .card1 .part1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.project .money .puplic .card1 .part1 span:nth-child(1) {
+    color: var(--blueColor);
+    font-size: .875rem;
+    line-height: 1.25rem;
+    font-family: var(--fontWeight500);
+}
+
+.project .money .puplic .card1 .part1 span:nth-child(2) {
+    color: #1C398E;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: var(--fontWeight700);
+}
+
+.project .money .puplic .card1 .part2 {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-content: start;
+
+}
+
+.project .money .puplic .card1 .part2 span:nth-child(1) {
+    font-size: .875rem;
+    line-height: 1.25rem;
+    padding-left: 2.5rem;
+
+}
+
+.project .money .puplic .card1 .part2 span:nth-child(2) {
+    color: var(--greenColor);
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+
+}
+
+.project .money .puplic .card1 .part3 {
+    display: flex;
+    justify-content: space-between;
+    font-size: .75rem;
+    line-height: 1rem;
+    color: #4A5565;
+    margin-block: 15px 5px;
+}
+
+.project .money .puplic .card1 .bar,
+.project .money .puplic .card2 .bar,
+.project .money .puplic .card3 .bar,
+.project .money .puplic .card4 .bar,
+.project .money .puplic .card5 .bar {
+    width: 100%;
+    height: 8px;
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.project .money .puplic .card1 .pre-bar,
+.project .money .puplic .card2 .pre-bar,
+.project .money .puplic .card3 .pre-bar,
+.project .money .puplic .card4 .pre-bar,
+.project .money .puplic .card5 .pre-bar {
+    height: 8px;
+    border-radius: 10px;
+}
+
+.project .money .puplic .card1 .pre-bar {
+    width: 82.5%;
+    background-image: linear-gradient(to left, #6061FF, #317DFF);
+
+
+}
+
+.project .money .puplic .card2,
+.project .money .puplic .card3,
+.project .money .puplic .card4,
+.project .money .puplic .card5 {
+    background-color: white;
+    padding: .9375rem;
+    border-radius: .9375rem;
+    border: 1px solid rgb(234, 234, 234);
+    margin-block-start: 20px;
+    transition: all .2s;
+}
+
+.project .money .puplic .card2:hover,
+.project .money .puplic .card3:hover,
+.project .money .puplic .card4:hover,
+.project .money .puplic .card5:hover {
+    background-color: #F5F6F8;
+    box-shadow: 0 3px 3px #ececec;
+    transform: translateY(-2px);
+
+}
+
+.project .money .puplic .card2 .part1,
+.project .money .puplic .card3 .part1,
+.project .money .puplic .card4 .part1,
+.project .money .puplic .card5 .part1 {
+    display: flex;
+    align-items: center;
+
+
+}
+
+.project .money .puplic .card2 .part1 i,
+.project .money .puplic .card3 .part1 i,
+.project .money .puplic .card4 .part1 i,
+.project .money .puplic .card5 .part1 i {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    color: var(--orangeColor);
+    background-color: var(--bgOrange);
+    align-content: center;
+    margin-left: 10px;
+}
+
+.project .money .puplic .card3 .part1 i {
+    color: var(--redColor);
+    background-color: var(--bgRed);
+}
+
+.project .money .puplic .card4 .part1 i {
+    color: #E60076;
+    background-color: #FCE7F3;
+}
+
+.project .money .puplic .card5 .part1 i {
+    color: #00A63E;
+    background-color: #DCFCE7;
+}
+
+.project .money .puplic .card2 .part1 p,
+.project .money .puplic .card3 .part1 p,
+.project .money .puplic .card4 .part1 p,
+.project .money .puplic .card5 .part1 p {
+    margin: 0;
+}
+
+.project .money .puplic .card2 .part1 p:nth-child(1),
+.project .money .puplic .card3 .part1 p:nth-child(1),
+.project .money .puplic .card4 .part1 p:nth-child(1),
+.project .money .puplic .card5 .part1 p:nth-child(1) {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-family: var(--fontWeight500);
+    color: black;
+
+}
+
+.project .money .puplic .card2 .part2,
+.project .money .puplic .card3 .part2,
+.project .money .puplic .card4 .part2,
+.project .money .puplic .card5 .part2 {
+    display: flex;
+    justify-content: end;
+    color: black;
+    padding-left: .625rem;
+}
+
+.project .money .puplic .card2 .part3,
+.project .money .puplic .card3 .part3,
+.project .money .puplic .card4 .part3,
+.project .money .puplic .card5 .part3 {
+    display: flex;
+    justify-content: flex-end;
+    margin-block: 8px;
+
+
+}
+
+.project .money .puplic .card2 .part3 span,
+.project .money .puplic .card3 .part3 span,
+.project .money .puplic .card4 .part3 span,
+.project .money .puplic .card5 .part3 span {
+    background-color: #DCFCE7;
+    color: #166534;
+    font-size: .75rem;
+    line-height: 1rem;
+    font-family: var(--fontWeight500);
+    padding: 3px 8px;
+    border-radius: 10px;
+
+}
+
+.project .money .puplic .card3 .part3 span {
+    background-color: var(--bgRed);
+    color: #991B1B;
+}
+
+.project .money .puplic .card4 .part3 span {
+    background-color: #FEF3C7;
+    color: #92400E;
+}
+
+.project .money .puplic .card5 .part3 span {
+    background-color: #DCFCE7;
+    color: #166534;
+}
+
+.project .money .puplic .card2 .pre-bar {
+    width: 50%;
+    background-image: linear-gradient(to left, #FF6900, #FF6900);
+
+
+}
+
+.project .money .puplic .card3 .pre-bar {
+    width: 100%;
+    background-image: linear-gradient(to left, #FB2C36, #FB2C36);
+
+
+}
+
+.project .money .puplic .card4 .pre-bar {
+    width: 80%;
+    background-image: linear-gradient(to left, #F6339A, #F6339A);
+
+
+}
+
+.project .money .puplic .card5 .pre-bar {
+    width: 86%;
+    background-image: linear-gradient(to left, #00C950, #00C950);
+
+
+}
+
+
+
+.project .money .in-out {
+    grid-area: in-out;
+
+
+}
+
+.project .money .in-out .part1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .75rem;
+    line-height: 1.125rem;
+    margin-block: 20px;
+}
+
+.project .money .in-out .part1 i {
+    margin-inline: 15px 5px;
+}
+
+.project .money .in-out .part1 i:nth-child(1) {
+    color: #10B981;
+}
+
+.project .money .in-out .part1 i:nth-child(3) {
+    color: #EF4444;
+}
+
+.project .money .in-out .part2 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-block: 60px 20px;
+
+}
+
+.project .money .in-out .part2 .container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+}
+
+.project .money .in-out .part2 .container span {
+    font-size: .75rem;
+    line-height: 1.125rem;
+    margin-top: .375rem;
+}
+
+.project .money .in-out .part2 .chart1,
+.project .money .in-out .part2 .chart2,
+.project .money .in-out .part2 .chart3,
+.project .money .in-out .part2 .chart4 {
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.project .money .in-out .part2 .chart1 .green,
+.project .money .in-out .part2 .chart2 .green,
+.project .money .in-out .part2 .chart3 .green,
+.project .money .in-out .part2 .chart4 .green {
+    width: 18px;
+
+    background-color: #10B981;
+    border-radius: 3px 3px 0 0;
+
+    transition: all .2s;
+}
+
+.project .money .in-out .part2 .chart1 .green:hover,
+.project .money .in-out .part2 .chart2 .green:hover,
+.project .money .in-out .part2 .chart3 .green:hover,
+.project .money .in-out .part2 .chart4 .green:hover {
+    background-color: #40C79A;
+
+}
+
+.project .money .in-out .part2 .chart1 .green {
+    height: 100px;
+}
+
+.project .money .in-out .part2 .chart2 .green {
+    height: 106px;
+}
+
+.project .money .in-out .part2 .chart3 .green {
+    height: 95px;
+}
+
+.project .money .in-out .part2 .chart4 .green {
+    height: 103px;
+}
+
+.project .money .in-out .part2 .chart1 .red,
+.project .money .in-out .part2 .chart2 .red,
+.project .money .in-out .part2 .chart3 .red,
+.project .money .in-out .part2 .chart4 .red {
+    width: 18px;
+
+    background-color: #EF4444;
+    margin-inline: 2px;
+    border-radius: 3px 3px 0 0;
+    transition: all .2s;
+}
+
+.project .money .in-out .part2 .chart1 .red:hover,
+.project .money .in-out .part2 .chart2 .red:hover,
+.project .money .in-out .part2 .chart3 .red:hover,
+.project .money .in-out .part2 .chart4 .red:hover {
+    background-color: #F26969;
+}
+
+.project .money .in-out .part2 .chart1 .red {
+    height: 45px;
+}
+
+.project .money .in-out .part2 .chart2 .red,
+.project .money .in-out .part2 .chart4 .red {
+    height: 50px;
+}
+
+.project .money .in-out .part2 .chart3 .red {
+    height: 40px;
+}
+
+
+.project .money .account {
+    grid-area: account;
+    height: fit-content;
+    padding-bottom: 50px;
+}
+
+.project .money .account .card1,
+.project .money .account .card2,
+.project .money .account .card3 {
+    background-color: #F9FAFB;
+    padding: 20px;
+    border: 1px solid rgb(245, 245, 245);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-block: 10px;
+
+}
+
+.project .money .account .card1 i,
+.project .money .account .card2 i,
+.project .money .account .card3 i {
+    width: 40px;
+    height: 40px;
+    color: var(--blueColor);
+    background-color: #DBEAFE;
+    border-radius: 10px;
+    align-content: center;
+}
+
+.project .money .account .card2 i {
+    color: var(--greenColor);
+    background-color: #DBFCE7;
+}
+
+.project .money .account .card3 i {
+    color: var(--burbleColor);
+    background-color: var(--bgBurble);
+}
+
+.project .money .account .card1 span,
+.project .money .account .card2 span,
+.project .money .account .card3 span {
+    color: black;
+}
+
+.project .money .account .card3 span:nth-child(3) {
+    color: var(--redColor);
+}
+
+.project .money .account .card1 p,
+.project .money .account .card2 p,
+.project .money .account .card3 p {
+    margin: 0;
+}
+
+
+
+.project .money .visa {
+    grid-area: visa;
+    height: fit-content;
+}
+
+.project .money .visa .container {
+    width: 100%;
+    height: 225px;
+}
+
+.project .money .visa .card1,
+.project .money .visa .card2,
+.project .money .visa .card3 {
+    width: 100%;
+    height: 225px;
+    margin-block-start: 15px;
+    position: relative;
+    width: 100%;
+
+}
+
+.project .money .visa .card3 {
+    height: 200px;
+}
+
+.project .money .visa .card1 .front,
+.project .money .visa .card2 .front,
+.project .money .visa .card3 .front {
+
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    border-radius: 20px;
+    background-image: linear-gradient(#372AAC, #372AAC);
+    position: absolute;
+    z-index: 2;
+
+
+}
+
+.project .money .visa .card2 .front {
+    background-image: linear-gradient(#C60036, #C60036);
+}
+
+.project .money .visa .card3 .front {
+    background-image: linear-gradient(#1e45d0, #1e45d0);
+}
+
+.project .money .visa .card1:hover .front,
+.project .money .visa .card2:hover .front,
+.project .money .visa .card3:hover .front {
+    animation: rotate .3s ease-in-out;
+    opacity: 0;
+
+
+
+}
+
+.project .money .visa .card1:not(:hover) .front,
+.project .money .visa .card2:not(:hover) .front,
+.project .money .visa .card3:not(:hover) .front {
+    animation: rotateback .3s ease-in-out;
+    opacity: 1;
+
+
+}
+
+.project .money .visa .card1 .front .part1,
+.project .money .visa .card2 .front .part1,
+.project .money .visa .card3 .front .part1 {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.project .money .visa .card1 .front .part1 .out,
+.project .money .visa .card2 .front .part1 .out,
+.project .money .visa .card3 .front .part1 .out {
+    width: 50px;
+    height: 35px;
+    border-radius: 8px;
+    background-color: #5f55bddc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project .money .visa .card2 .front .part1 .out {
+    background-color: #D1335E;
+}
+
+.project .money .visa .card3 .front .part1 .out {
+    background-color: #6d62d7dc;
+}
+
+.project .money .visa .card1 .front .part1 .in,
+.project .money .visa .card2 .front .part1 .in,
+.project .money .visa .card3 .front .part1 .in {
+    width: 25px;
+    height: 15px;
+    border-radius: 5px;
+    background-color: #9F99D7;
+}
+
+.project .money .visa .card2 .front .part1 .in {
+    background-color: #E3859E;
+}
+
+.project .money .visa .card3 .front .part1 .in {
+    background-color: #b0a9eb;
+}
+
+.project .money .visa .card1 .front .part1 i,
+.project .money .visa .card2 .front .part1 i,
+.project .money .visa .card3 .front .part1 i {
+    font-size: 30px;
+    color: white;
+}
+
+.project .money .visa .card1 .front .part2,
+.project .money .visa .card2 .front .part2,
+.project .money .visa .card3 .front .part2 {
+    color: white;
+
+    font-size: 18px;
+    line-height: 24px;
+    margin-block: 30px 10px;
+}
+
+.project .money .visa .card1 .front .part2 span,
+.project .money .visa .card2 .front .part2 span,
+.project .money .visa .card3 .front .part2 span {
+    font-size: 26px;
+    display: flex;
+
+
+}
+
+.project .money .visa .card1 .front .part3,
+.project .money .visa .card2 .front .part3,
+.project .money .visa .card3 .front .part3 {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: .75rem;
+
+}
+
+.project .money .visa .card1 .front .part3 div,
+.project .money .visa .card2 .front .part3 div,
+.project .money .visa .card3 .front .part3 div {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.project .money .visa .card3 .front .part3 div:nth-child(2) span:nth-child(2) {
+    color: rgb(123, 232, 123);
+    font-size: 1rem;
+}
+
+
+.project .money .visa .card1 .back,
+.project .money .visa .card2 .back,
+.project .money .visa .card3 .back {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    border-radius: 20px;
+    background-image: linear-gradient(#081123, #081123);
+    position: absolute;
+    z-index: 1;
+}
+
+.project .money .visa .card1:hover .back,
+.project .money .visa .card2:hover .back,
+.project .money .visa .card3:hover .back {
+    animation: rotateback .3s forwards ease-in-out;
+    opacity: 1;
+
+}
+
+.project .money .visa .card1 .back .part1,
+.project .money .visa .card2 .back .part1,
+.project .money .visa .card3 .back .part1 {
+    width: 100%;
+    height: 40px;
+    background-image: linear-gradient(to right, #020202, #2D2D2D);
+    border-radius: 3px;
+}
+
+.project .money .visa .card1 .back p,
+.project .money .visa .card2 .back p,
+.project .money .visa .card3 .back p {
+    font-size: .625rem;
+    line-height: .9375rem;
+    margin-top: .3125rem;
+}
+
+.project .money .visa .card1 .back .part2,
+.project .money .visa .card2 .back .part2,
+.project .money .visa .card3 .back .part2 {
+    width: 100%;
+    height: 1.875rem;
+    background-color: #F5F8FA;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.project .money .visa .card1 .back .part2 span,
+.project .money .visa .card2 .back .part2 span,
+.project .money .visa .card3 .back .part2 span {
+    font-size: .875rem;
+    line-height: 1.375rem;
+    font-family: var(--fontWeight700);
+    color: black;
+    padding-left: 20px;
+
+}
+
+.project .money .visa .card1 .back .part2 div,
+.project .money .visa .card2 .back .part2 div,
+.project .money .visa .card3 .back .part2 div {
+    width: 70%;
+    height: 10px;
+    background-image: linear-gradient(to right, #E3E6E8, #CBCDD0, #E3E6E8);
+}
+
+.project .money .visa .card1 .back .part3,
+.project .money .visa .card2 .back .part3,
+.project .money .visa .card3 .back .part3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 10px;
+
+}
+
+.project .money .visa .card1 .back .part3 span:nth-child(1),
+.project .money .visa .card2 .back .part3 span:nth-child(1),
+.project .money .visa .card3 .back .part3 span:nth-child(1) {
+    padding-left: 20px;
+}
+
+.project .money .visa .card1 .back .part3 span:nth-child(2),
+.project .money .visa .card2 .back .part3 span:nth-child(2),
+.project .money .visa .card3 .back .part3 span:nth-child(2) {
+    line-height: 1.5rem;
+    font-family: var(--fontWeight700);
+    color: black;
+    width: 50px;
+    height: 40px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: rotatey(0);
+    }
+
+    49% {
+        transform: rotatey(90deg);
+    }
+
+    50% {
+        transform: rotatey(90deg);
+    }
+
+    100% {
+        transform: rotatey(180deg);
+    }
+
+}
+
+@keyframes rotateback {
+    0% {
+        transform: rotatey(180deg);
+    }
+
+    49% {
+        transform: rotatey(90deg);
+    }
+
+    50% {
+        transform: rotatey(90deg);
+    }
+
+    100% {
+        transform: rotatey(0);
+    }
+
+}
+
+
+
+
+
+@media screen and (max-width:640px) {
+    .sideBar {
+        display: none;
+    }
+
+    .project {
+        width: 100%;
+        position: relative;
+        left: 0;
+        right: 0;
+    }
+
+    .project nav {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .project .logo {
+        width: 100%;
+    }
+
+    .project .online {
+        width: 100%;
+        margin-block: 20px;
+        text-align: center;
+    }
+
+    .project .div {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+
+    .project .bar {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+    }
+
+
+    .project .bar .account div:nth-child(1) {
+        display: none;
+    }
+
+    .project .bar .account img {
+        border-radius: 15px;
+        margin-inline-start: 0;
+    }
+
+    .project .balance .card {
+        width: 100%;
+    }
+
+    .activity {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "new-activity"
+            " last-activity"
+            "reciepts";
+        gap: 15px;
+    }
+
+    .project .money {
+        display: grid;
+        gap: 15px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "puplic"
+            "in-out"
+            "account"
+            "visa"
+        ;
+        margin-block: 20px;
+    }
+}
+
+
+
+
+@media screen and (min-width:640px) {
+    .sideBar {
+        display: none;
+    }
+
+    .project {
+        width: 100%;
+        position: relative;
+        left: 0;
+        right: 0;
+
+    }
+
+    .project .online {
+        width: fit-content;
+    }
+
+    .project .logo {
+        width: 30%;
+    }
+
+    .project .div {
+        width: 70%;
+    }
+
+    .project .balance .card {
+        width: 100%;
+    }
+
+    .activity {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "new-activity"
+            " last-activity"
+            "reciepts";
+        gap: 15px;
+    }
+
+    .project .money {
+        display: grid;
+        gap: 15px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "puplic"
+            "in-out"
+            "account"
+            "visa"
+        ;
+        margin-block: 20px;
+    }
+}
+
+
+
+
+
+
+
+@media screen and (min-width:768px) {
+    .sideBar {
+        display: inline-block;
+        width: 60px;
+        padding: 3px;
+
+    }
+
+    .sideBar .barHead .content {
+        display: none;
+    }
+
+    .sideBar .barPart1 a {
+        display: none;
+    }
+
+    .sideBar .barPart2 a,
+    .sideBar .barPart2 span {
+        display: none;
+    }
+
+    .sideBar .barPart2 i {
+        margin-inline: 0;
+    }
+
+    .sideBar .barPart2 div {
+        margin-block: 10px;
+    }
+
+    .sideBar .barPart1 {
+        margin-block: 30px 0px;
+    }
+
+    .project {
+        width: 95%;
+        position: relative;
+        left: 0;
+        right: 5%;
+    }
+
+    .project .online {
+        width: fit-content;
+
+    }
+
+    .project .logo {
+        width: 30%;
+    }
+
+    .project .div {
+        width: 70%;
+    }
+
+    .project .balance .card {
+        width: 32%;
+    }
+
+    .project .balance .card {
+        width: 32%;
+    }
+
+    .activity {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "new-activity reciepts"
+            " last-activity last-activity"
+        ;
+        gap: 15px;
+    }
+
+    .project .money {
+        display: grid;
+        gap: 15px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "in-out account "
+            "puplic  visa"
+
+        ;
+        margin-block: 20px;
+    }
+
+}
+
+
+
+@media screen and (min-width:1024px) {
+    .sideBar {
+        display: inline-block;
+        width: 60px;
+        padding: 3px;
+    }
+
+    .sideBar .barHead .content {
+        display: none;
+    }
+
+    .sideBar .barPart1 a {
+        display: none;
+    }
+
+    .sideBar .barPart2 a,
+    .sideBar .barPart2 span {
+        display: none;
+    }
+
+    .sideBar .barPart2 i {
+        margin-inline: 0;
+    }
+
+    .sideBar .barPart2 div {
+        margin-block: 10px;
+    }
+
+    .sideBar .barPart1 {
+        margin-block: 30px 0px;
+    }
+
+    .project {
+        width: 95%;
+        position: relative;
+        left: 0;
+        right: 5%;
+    }
+
+    .project .balance .card {
+        width: 32%;
+    }
+
+    .activity {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "new-activity reciepts"
+            " last-activity last-activity"
+        ;
+        gap: 15px;
+    }
+
+    .project .money {
+        display: grid;
+        gap: 15px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "in-out account "
+            "puplic  visa"
+
+        ;
+        margin-block: 20px;
+    }
+
+
+}
+
+@media screen and (min-width:1280px) {
+    .sideBar {
+        display: inline-block;
+        width: 20%;
+        padding: 1.5625rem;
+    }
+
+    .sideBar .barHead .content {
+        display: inline-block;
+    }
+
+    .sideBar .barPart1 a {
+        display: inline-block;
+    }
+
+    .sideBar .barPart2 a,
+    .sideBar .barPart2 span {
+        display: inline-block;
+    }
+
+    .sideBar .barPart2 i {
+        margin-inline: 10px;
+    }
+
+    .sideBar .barPart2 div {
+        margin-block: 20px;
+    }
+
+    .sideBar .barPart1 {
+        margin-block: 30px;
+    }
+
+    .project {
+        width: 80%;
+        position: relative;
+        left: 0;
+        right: 20%;
+    }
+
+    .project .logo {
+        width: 20%;
+    }
+
+    .project .div {
+        width: 80%;
+    }
+
+    .project .balance .card {
+        width: 32%;
+    }
+
+    .activity {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "new-activity last-activity last-activity"
+            "reciepts last-activity last-activity";
+        gap: 15px;
+    }
+
+    .project .money {
+        display: grid;
+        gap: 15px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "puplic in-out visa"
+            "puplic account visa"
+            "puplic . ."
+        ;
+        margin-block: 20px;
+    }
+}
